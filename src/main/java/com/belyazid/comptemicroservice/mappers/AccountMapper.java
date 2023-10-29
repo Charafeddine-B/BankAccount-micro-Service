@@ -10,6 +10,7 @@ import org.springframework.ui.ModelMap;
 @Component
 public class AccountMapper {
     ModelMapper modelMapper = new ModelMapper();
+
     public BankAccountResponseDto convertToDto(BankAccount bankAccount){
         BankAccountResponseDto bankAccountResponseDto =  new BankAccountResponseDto();
         BeanUtils.copyProperties(bankAccount,bankAccountResponseDto);

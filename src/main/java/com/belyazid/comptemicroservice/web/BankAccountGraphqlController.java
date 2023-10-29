@@ -15,12 +15,13 @@ public class BankAccountGraphqlController {
     private BankAccountRepository bankAccountRepository;
 
     @QueryMapping
-    public List<BankAccount> BankAccountsList(){
+    public List<BankAccount> accountsList(){
         return bankAccountRepository.findAll();
     }
     @QueryMapping
-    public BankAccount BankAccountbyId(@Argument String id){
+    public BankAccount bankAccountById(@Argument String id){
         return bankAccountRepository.findById(id)
-                .orElseThrow(()->new RuntimeException(String.format("Account %s not found",id)));
+                .orElseThrow(()->
+                        new RuntimeException(String.format("Account %s not found",id)));
     }
 }

@@ -1,6 +1,7 @@
 type Query{
-accounts : [BankAccount],
-    account(id : String) : BankAccount
+    accountsList : [BankAccount],
+    bankAccountById(id : String) : BankAccount,
+
 }
 type BankAccount{
     id : String,

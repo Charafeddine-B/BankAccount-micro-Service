@@ -29,7 +29,7 @@ public class AccountRestController {
     public List<BankAccount> bankaccounts(){
         return bankAccountRepository.findAll();
 
-    }
+      }
     @GetMapping("/bankaccounts/{id}")
     public BankAccount bankaccount(@PathVariable String id){
         return bankAccountRepository.findById(id).orElseThrow(()->new RuntimeException(String.format("Account %s not found",id)));
