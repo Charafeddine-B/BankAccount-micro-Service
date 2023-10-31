@@ -9,5 +9,7 @@ import org.springframework.stereotype.Service;
 public interface AccountService {
 
     BankAccountResponseDto addAccount(BankAccountRequestDto bankAccountDto);
+    BankAccountResponseDto updateAccount(String id,BankAccountRequestDto bankAccountDto);
+    boolean deleteAccount(String id);
 }
 
